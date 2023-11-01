@@ -1,24 +1,19 @@
 package com.example.e_commerce;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
-    private Pane createContent(){
-        Pane root = new Pane();
-        return root;
-    }
+public class ECommerce extends Application {
+    UserInterface userInterface = new UserInterface();
     @Override
     public void start(Stage stage) throws IOException {
-       // FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        //fxmlLoader.load(),
-        Scene scene = new Scene(createContent());
-        stage.setTitle("Hello!");
+
+        Scene scene = new Scene(userInterface.createContent());
+        stage.setTitle("Ecommerce");
         stage.setScene(scene);
         stage.show();
     }
